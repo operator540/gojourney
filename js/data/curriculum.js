@@ -211,8 +211,8 @@ export const curriculum = {
             icon: 'bi-mortarboard',
             description: 'Clean code, нейминг, итоговый проект, подготовка к собеседованию',
             lessons: [
-                { id: '14-01', file: '01-clean-code', title: 'Принципы чистого кода', time: 20 },
-                { id: '14-02', file: '02-naming', title: 'Нейминг в Go', time: 15 },
+                { id: '14-01', file: '01-clean-code-principles', title: 'Принципы чистого кода', time: 20 },
+                { id: '14-02', file: '02-naming-conventions', title: 'Нейминг в Go', time: 15 },
                 { id: '14-03', file: '03-code-review', title: 'Code Review чеклист', time: 15 },
                 { id: '14-04', file: '04-project-overview', title: 'Финальный проект: обзор', time: 20 },
                 { id: '14-05', file: '05-project-api', title: 'Финальный проект: API', time: 30 },
@@ -250,8 +250,8 @@ export const curriculum = {
                 { id: '16-03', file: '03-explain', title: 'EXPLAIN и планировщик', time: 25 },
                 { id: '16-04', file: '04-joins-deep-dive', title: 'Виды JOIN (Deep Dive)', time: 25 },
                 { id: '16-05', file: '05-advanced-transactions', title: 'Уровни изоляции транзакций', time: 30 },
-                { id: '16-06', file: '06-locking', title: 'Блокировки (Locks)', time: 20 },
-                { id: '16-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 20 },
+                { id: '16-06', file: '07-locking', title: 'Блокировки (Locks)', time: 20 },
+                { id: '16-07', file: '08-module-quiz', title: 'Итоговый квиз', time: 20 },
             ]
         },
         {
@@ -277,7 +277,7 @@ export const curriculum = {
             description: 'Echo Framework, Routing, Middleware, Binding, Validation',
             lessons: [
                 { id: '18-01', file: '01-intro-echo', title: 'Введение в Echo', time: 20 },
-                { id: '18-02', file: '02-routing-echo', title: 'Роутинг и параметры', time: 20 },
+                { id: '18-02', file: '02-echo-routing', title: 'Роутинг и параметры', time: 20 },
                 { id: '18-03', file: '03-middleware-echo', title: 'Middleware в Echo', time: 25 },
                 { id: '18-04', file: '04-binding-validation', title: 'Binding и Валидация', time: 25 },
                 { id: '18-05', file: '05-context', title: 'Context в Echo', time: 20 },
@@ -307,8 +307,8 @@ export const curriculum = {
             icon: 'bi-tools',
             description: 'Makefile, Linters, GitHub Actions, Build tags',
             lessons: [
-                { id: '20-01', file: '01-makefile', title: 'Makefile для Go', time: 20 },
-                { id: '20-02', file: '02-linters', title: 'Линтеры (golangci-lint)', time: 25 },
+                { id: '20-01', file: '01-go-tools', title: 'Go инструменты', time: 20 },
+                { id: '20-02', file: '02-linting', title: 'Линтеры (golangci-lint)', time: 25 },
                 { id: '20-03', file: '03-build-tags', title: 'Build Tags и ldflags', time: 20 },
                 { id: '20-04', file: '04-github-actions', title: 'CI/CD с GitHub Actions', time: 30 },
                 { id: '20-05', file: '05-module-quiz', title: 'Итоговый квиз', time: 15 },
