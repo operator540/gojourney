@@ -1,0 +1,63 @@
+/* === Ace Editor === */
+
+.editor-section {
+    margin: var(--sp-6) 0;
+}
+
+.editor-container {
+    min-height: 200px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.editor-container .ace_editor {
+    font-family: var(--font-mono) !important;
+    background: var(--bg-code) !important;
+}
+
+.editor-container .ace_gutter {
+    background: #0a0a0a !important;
+    color: #444 !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+.editor-container .ace_cursor {
+    color: var(--accent) !important;
+}
+
+.editor-container .ace_active-line {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.editor-container .ace_selection {
+    background: rgba(0, 173, 216, 0.15) !important;
+}
+
+/* Output panel */
+.editor-output {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-relaxed);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.08) transparent;
+}
+
+.output-text {
+    color: var(--text-primary);
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.output-error {
+    color: var(--error);
+}
+
+.output-info {
+    color: var(--text-muted);
+}
+
+/* Editor actions */
+.editor-actions {
+    display: flex;
+    gap: var(--sp-2);
+}

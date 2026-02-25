@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoJourney — Путь к Junior Go-разработчику</title>
+    <meta name="description" content="Интерактивная платформа для изучения Go: от основ до Junior-разработчика">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- highlight.js theme -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+    <!-- Search dropdown styles (inline — small) -->
+    <style>
+        .search-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--r-md);
+            box-shadow: var(--shadow-lg);
+            z-index: var(--z-modal);
+            max-height: 320px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .search-dropdown.visible {
+            display: block;
+        }
+
+        .search-result-item {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-3);
+            padding: var(--sp-3) var(--sp-4);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: background var(--dur-fast);
+        }
+
+        .search-result-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .search-result-icon {
+            font-size: var(--fs-lg);
+            flex-shrink: 0;
+            color: var(--text-muted);
+        }
+
+        .search-result-title {
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-medium);
+        }
+
+        .search-result-module {
+            font-size: var(--fs-xs);
+            color: var(--text-muted);
+        }
+
+        .search-empty {
+            padding: var(--sp-4);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--fs-sm);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- App Loader (cyan accent) -->
+    <div id="app-loader"
+        style="position: fixed; inset: 0; background: #0a0a0a; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.3s ease-out;">
+        <div
+            style="width: 32px; height: 32px; border: 2px solid rgba(255,255,255,0.06); border-top-color: #00add8; border-radius: 50%; animation: spin 0.8s linear infinite;">
+        </div>
+        <style>
+            @keyframes spin {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('app-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.remove(), 300);
+                }
+            }, 300);
+        });
+    </script>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar"></aside>
+
+        <!-- Mobile backdrop -->
+        <div class="sidebar-backdrop"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-outline-secondary d-md-none mobile-menu-btn" aria-label="Меню"><i
+                        class="bi bi-list"></i></button>
+                <div id="progress-header" class="flex-grow-1 flex-md-grow-0" style="min-width: 200px;"></div>
+            </div>
+
+            <div class="header-right ms-auto">
+                <div class="position-relative">
+                    <div class="input-group">
+                        <span class="input-group-text bg-body-tertiary border-end-0"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control border-start-0 ps-0" id="search-input"
+                            placeholder="Поиск уроков..." autocomplete="off">
+                    </div>
+                    <div class="list-group position-absolute w-100 mt-1 start-0 shadow z-3 d-none" id="search-results">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="content" id="content">
+            <!-- Pages render here -->
+        </main>
+    </div>
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <!-- Ace Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/mode-golang.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.5/theme-one_dark.js"></script>
+
+    <!-- Mermaid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.12.0/mermaid.min.js"></script>
+
+    <!-- App -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="js/app.js?v=6"></script>
+</body>
+
+</html>

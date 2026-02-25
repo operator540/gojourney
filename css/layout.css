@@ -1,0 +1,64 @@
+/* === Layout === */
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    grid-template-rows: var(--header-h) 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar content";
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    z-index: var(--z-sidebar);
+}
+
+/* Header — solid, no glassmorphism */
+.header {
+    grid-area: header;
+    background: var(--bg-app);
+    border-bottom: 1px solid var(--border);
+    padding: 0 var(--sp-6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: var(--z-header);
+}
+
+/* Content */
+.content {
+    grid-area: content;
+    overflow-y: auto;
+    padding: var(--sp-8) var(--sp-6);
+    background: var(--bg-app);
+}
+
+.content-inner {
+    max-width: var(--content-max-w);
+    margin: 0 auto;
+    padding-bottom: var(--sp-16);
+}
+
+/* Sidebar backdrop (mobile) */
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: calc(var(--z-sidebar) - 1);
+}
+
+.sidebar-backdrop.visible {
+    display: block;
+}

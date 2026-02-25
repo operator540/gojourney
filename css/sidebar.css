@@ -1,0 +1,143 @@
+/* === Sidebar === */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header / Logo */
+.sidebar-header {
+    padding: var(--sp-5) var(--sp-5);
+}
+
+.logo-text {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-lg);
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    border-radius: var(--r-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xs);
+    flex-shrink: 0;
+}
+
+/* Accordion */
+.accordion {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-width: 0;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-item {
+    background: transparent;
+    border: none;
+}
+
+.accordion-button {
+    background: transparent !important;
+    padding: var(--sp-2) var(--sp-5);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--text-secondary);
+    box-shadow: none !important;
+    gap: var(--sp-2);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--text-primary);
+}
+
+.accordion-button::after {
+    background-size: 0.75rem;
+    opacity: 0.3;
+    filter: invert(1);
+}
+
+.accordion-button .module-icon {
+    font-size: var(--fs-base);
+    width: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.accordion-button:not(.collapsed) .module-icon {
+    color: var(--accent);
+}
+
+/* Lesson List */
+.sidebar .list-group {
+    border-radius: 0;
+    padding: var(--sp-1) var(--sp-3) var(--sp-3) var(--sp-3);
+}
+
+.sidebar .list-group-item {
+    background: transparent;
+    border: none;
+    padding: var(--sp-2) var(--sp-3);
+    padding-left: calc(var(--sp-3) + 20px + var(--sp-2));
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    border-radius: var(--r-sm);
+    transition: all var(--dur-fast);
+    margin-bottom: 1px;
+    border-left: 2px solid transparent;
+}
+
+.sidebar .list-group-item:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+.sidebar .list-group-item.active {
+    background: var(--accent-subtle);
+    color: var(--accent);
+    font-weight: var(--fw-medium);
+    border-left-color: var(--accent);
+    border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+
+.sidebar .list-group-item.list-group-item-success {
+    color: var(--text-secondary);
+}
+
+.sidebar .list-group-item.list-group-item-success .bi-check-circle-fill {
+    color: var(--success);
+}
+
+/* Status icons */
+.lesson-status-icon {
+    font-size: var(--fs-xs);
+    opacity: 0.4;
+    margin-right: var(--sp-2);
+}
+
+.list-group-item.active .lesson-status-icon {
+    opacity: 1;
+}
+
+/* Bottom nav */
+.sidebar-nav-bottom {
+    padding: var(--sp-3) var(--sp-5);
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+/* User profile / stats */
+.user-profile-section {
+    padding: var(--sp-4) var(--sp-5);
+    border-top: 1px solid var(--border);
+}

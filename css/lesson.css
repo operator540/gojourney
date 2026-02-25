@@ -1,0 +1,190 @@
+/* === Lesson Page === */
+
+.lesson-header {
+    margin-bottom: var(--sp-8);
+}
+
+.lesson-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-3);
+    flex-wrap: wrap;
+}
+
+/* No gradient text — plain color */
+.lesson-title {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--sp-2);
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.lesson-description {
+    color: var(--text-secondary);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-relaxed);
+}
+
+/* Theory blocks */
+.theory-block {
+    margin-bottom: var(--sp-8);
+    line-height: var(--lh-relaxed);
+}
+
+/* Code examples */
+.code-example {
+    margin: var(--sp-6) 0;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-code);
+}
+
+.code-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--sp-3) var(--sp-4);
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--text-secondary);
+}
+
+.code-title-lang {
+    font-size: var(--fs-xs);
+    color: var(--accent);
+    font-family: var(--font-mono);
+}
+
+.code-wrapper {
+    position: relative;
+}
+
+.code-wrapper pre {
+    padding: var(--sp-4) var(--sp-5);
+    margin: 0;
+    overflow-x: auto;
+    tab-size: 4;
+}
+
+.code-wrapper pre code {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-relaxed);
+}
+
+.code-copy-btn {
+    position: absolute;
+    top: var(--sp-2);
+    right: var(--sp-2);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--r-sm);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: var(--fs-sm);
+    opacity: 0;
+    transition: opacity var(--dur-fast);
+    cursor: pointer;
+}
+
+.code-wrapper:hover .code-copy-btn {
+    opacity: 1;
+}
+
+.code-copy-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+}
+
+.code-copy-btn.copied {
+    color: var(--success);
+    border-color: var(--success);
+}
+
+.code-explanation {
+    padding: var(--sp-3) var(--sp-4);
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--border);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+    line-height: var(--lh-relaxed);
+    margin: 0;
+}
+
+/* Highlighted lines */
+.code-line-highlight {
+    background: var(--accent-subtle);
+    display: block;
+    margin: 0 calc(-1 * var(--sp-5));
+    padding: 0 var(--sp-5);
+    border-left: 2px solid var(--accent);
+}
+
+/* Sections */
+.lesson-section {
+    margin-bottom: var(--sp-8);
+}
+
+.lesson-section + .lesson-section {
+    padding-top: var(--sp-4);
+}
+
+/* Lesson navigation — flat buttons */
+.lesson-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    margin-top: var(--sp-12);
+    padding-top: var(--sp-8);
+    border-top: 1px solid var(--border);
+}
+
+.lesson-nav .btn {
+    transition: border-color var(--dur-fast);
+}
+
+.lesson-nav .btn:hover {
+    border-color: var(--border-hover);
+}
+
+/* Complete button — flat */
+.lesson-complete-section {
+    text-align: center;
+    padding: var(--sp-8) 0;
+    margin-top: var(--sp-8);
+}
+
+.lesson-complete-section .btn {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    padding: var(--sp-3) var(--sp-8);
+}
+
+/* Diagram */
+.diagram-section {
+    margin: var(--sp-6) 0;
+    text-align: center;
+}
+
+.diagram-section .mermaid {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: var(--sp-6);
+    overflow-x: auto;
+}
+
+.diagram-caption {
+    margin-top: var(--sp-2);
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    font-style: italic;
+}
