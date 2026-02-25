@@ -203,21 +203,31 @@ func main() {
             explanation: 'c.Error() добавляет ошибку в контекст запроса. ErrorHandler middleware читает их после вызова c.Next(). Это паттерн централизованной обработки ошибок — хендлеры не занимаются форматированием ошибок сами.'
         },
         {
-            type: 'quiz',
-            questions: [
-                {
-                    id: 'q2205-1',
-                    type: 'single',
-                    question: 'Чем c.JSON() отличается от c.IndentedJSON()?',
-                    options: [
-                        'IndentedJSON поддерживает больше типов данных',
-                        'IndentedJSON форматирует JSON с отступами — удобно для дебага, но медленнее',
-                        'c.JSON() только для структур, IndentedJSON только для gin.H',
-                        'Никакой разницы нет'
-                    ],
-                    correct: 1,
-                    explanation: 'IndentedJSON добавляет отступы для читабельности при дебаге. В production используй c.JSON() — он быстрее и экономит трафик. Разница в производительности заметна при высоких нагрузках.'
-                }
+            type: 'editor',
+            title: 'Практика: Единый формат ответа',
+            starterCode: `package handlers
+
+import (
+    "net/http"
+    "github.com/gin-gonic/gin"
+)
+
+// TODO: Напиши хендлер GetProduct
+// GET /products/:id
+// Логика:
+//   - Если id == "0" → вернуть 400 с {"success": false, "error": "invalid id"}
+//   - Если id == "999" → вернуть 404 с {"success": false, "error": "not found"}
+//   - Иначе → вернуть 200 с {"success": true, "data": {"id": id, "name": "Product"}}
+// Используй c.Param("id") для получения id
+
+func GetProduct(c *gin.Context) {
+    // твой код здесь
+}`,
+            hints: [
+                'id := c.Param("id")',
+                'c.JSON(http.StatusBadRequest, gin.H{"success": false, "error": "..."})',
+                'Используй if/else if для трёх случаев',
+                'c.JSON(http.StatusOK, gin.H{"success": true, "data": gin.H{"id": id, "name": "Product"}})'
             ]
         }
     ]
