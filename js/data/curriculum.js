@@ -1,5 +1,19 @@
 export const curriculum = {
     modules: [
+        // ─── ВВЕДЕНИЕ ────────────────────────────────────────────────
+        {
+            id: '00',
+            path: '00-intro',
+            title: 'Введение',
+            icon: 'bi-rocket-takeoff',
+            description: 'Зачем Go, как учиться эффективно, 80/20, ресурсы и инструменты',
+            lessons: [
+                { id: '00-01', file: '01-welcome', title: 'Добро пожаловать в GoJourney', time: 15 },
+                { id: '00-02', file: '02-why-go', title: 'Почему Go и принцип 80/20', time: 20 },
+                { id: '00-03', file: '03-how-to-learn', title: 'Как учиться эффективно', time: 20 },
+                { id: '00-04', file: '04-resources', title: 'Лучшие ресурсы для изучения', time: 15 },
+            ]
+        },
         // ─── ФУНДАМЕНТ ───────────────────────────────────────────────
         {
             id: '01',
@@ -295,6 +309,23 @@ export const curriculum = {
                 { id: '18-06', file: '06-project-refactor', title: 'Рефакторинг проекта на Echo', time: 40 },
                 { id: '18-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
                 { id: '18-08', file: '08-interview-prep', title: 'Финальная подготовка к собеседованию', time: 45 },
+            ]
+        },
+        // ─── GIN FRAMEWORK ───────────────────────────────────────────
+        {
+            id: '22',
+            path: '22-gin',
+            title: 'Gin Framework',
+            icon: 'bi-lightning-charge-fill',
+            description: 'Самый популярный Go-фреймворк: роутинг, middleware, binding, REST API',
+            lessons: [
+                { id: '22-01', file: '01-intro-gin', title: 'Введение в Gin', time: 20 },
+                { id: '22-02', file: '02-gin-routing', title: 'Роутинг в Gin', time: 25 },
+                { id: '22-03', file: '03-gin-middleware', title: 'Middleware в Gin', time: 25 },
+                { id: '22-04', file: '04-gin-binding', title: 'Binding и валидация', time: 25 },
+                { id: '22-05', file: '05-gin-responses', title: 'Ответы и обработка ошибок', time: 20 },
+                { id: '22-06', file: '06-gin-project', title: 'Практика: REST API на Gin', time: 40 },
+                { id: '22-07', file: '07-gin-module-quiz', title: 'Итоговый тест: Gin', time: 20 },
             ]
         },
         {
