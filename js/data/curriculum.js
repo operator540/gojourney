@@ -1,5 +1,6 @@
 export const curriculum = {
     modules: [
+        // ─── ФУНДАМЕНТ ───────────────────────────────────────────────
         {
             id: '01',
             path: '01-go-basics',
@@ -46,6 +47,24 @@ export const curriculum = {
                 { id: '03-05', file: '05-module-quiz', title: 'Итоговый квиз', time: 10 },
             ]
         },
+        // ─── ИНСТРУМЕНТЫ РАЗРАБОТЧИКА (ранний старт) ─────────────────
+        {
+            id: '13',
+            path: '13-docker-git',
+            title: 'Docker и Git',
+            icon: 'bi-box',
+            description: 'Git workflow, Docker, Dockerfile для Go, docker-compose',
+            lessons: [
+                { id: '13-01', file: '01-git-basics', title: 'Основы Git', time: 25 },
+                { id: '13-02', file: '02-git-branching', title: 'Ветвление и слияние', time: 20 },
+                { id: '13-03', file: '03-git-workflow', title: 'Git Workflow', time: 20 },
+                { id: '13-04', file: '04-docker-basics', title: 'Основы Docker', time: 25 },
+                { id: '13-05', file: '05-dockerfile-go', title: 'Dockerfile для Go', time: 20 },
+                { id: '13-06', file: '06-docker-compose', title: 'docker-compose', time: 20 },
+                { id: '13-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
+            ]
+        },
+        // ─── ЯЗЫК: ПРОДВИНУТЫЕ КОНЦЕПЦИИ ─────────────────────────────
         {
             id: '04',
             path: '04-error-handling',
@@ -76,6 +95,25 @@ export const curriculum = {
                 { id: '05-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
+        // ─── АЛГОРИТМЫ (до тестирования — для бенчмарков и собесов) ──
+        {
+            id: '15',
+            path: '15-algorithms',
+            title: 'Алгоритмы и Структуры Данных',
+            icon: 'bi-diagram-3',
+            description: 'Big O, сортировки, поиск, деревья, графы, хеш-таблицы',
+            lessons: [
+                { id: '15-01', file: '01-big-o', title: 'Сложность алгоритмов (Big O)', time: 25 },
+                { id: '15-02', file: '02-arrays-linked-lists', title: 'Массивы и связные списки', time: 25 },
+                { id: '15-03', file: '03-stacks-queues', title: 'Стеки и очереди', time: 20 },
+                { id: '15-04', file: '04-sorting', title: 'Алгоритмы сортировки', time: 30 },
+                { id: '15-05', file: '05-hash-tables', title: 'Хеш-таблицы', time: 25 },
+                { id: '15-06', file: '06-trees', title: 'Деревья и обход', time: 30 },
+                { id: '15-07', file: '07-graphs', title: 'Графы (BFS, DFS)', time: 35 },
+                { id: '15-08', file: '08-module-quiz', title: 'Итоговый квиз', time: 20 },
+            ]
+        },
+        // ─── КАЧЕСТВО КОДА ────────────────────────────────────────────
         {
             id: '06',
             path: '06-testing',
@@ -92,6 +130,7 @@ export const curriculum = {
                 { id: '06-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
+        // ─── WEB И API ────────────────────────────────────────────────
         {
             id: '07',
             path: '07-http-servers',
@@ -124,19 +163,20 @@ export const curriculum = {
                 { id: '08-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
+        // ─── БД И КЭШ ────────────────────────────────────────────────
         {
-            id: '09',
-            path: '09-grpc',
-            title: 'gRPC',
-            icon: 'bi-broadcast',
-            description: 'Protocol Buffers, gRPC сервер/клиент, REST vs gRPC',
+            id: '17',
+            path: '17-redis',
+            title: 'Redis и Кэширование',
+            icon: 'bi-hdd-stack',
+            description: 'In-memory DB, кэширование, Pub/Sub, персистентность',
             lessons: [
-                { id: '09-01', file: '01-grpc-intro', title: 'Введение в gRPC', time: 20 },
-                { id: '09-02', file: '02-protobuf', title: 'Protocol Buffers', time: 25 },
-                { id: '09-03', file: '03-grpc-server', title: 'gRPC сервер', time: 25 },
-                { id: '09-04', file: '04-grpc-client', title: 'gRPC клиент', time: 20 },
-                { id: '09-05', file: '05-rest-vs-grpc', title: 'REST vs gRPC', time: 20 },
-                { id: '09-06', file: '06-module-quiz', title: 'Итоговый квиз', time: 15 },
+                { id: '17-01', file: '01-redis-basics', title: 'Что такое Redis?', time: 20 },
+                { id: '17-02', file: '02-data-types', title: 'Типы данных Redis', time: 25 },
+                { id: '17-03', file: '03-redis-go', title: 'Работа с Redis в Go', time: 25 },
+                { id: '17-04', file: '04-caching-patterns', title: 'Паттерны кэширования', time: 30 },
+                { id: '17-05', file: '05-pub-sub', title: 'Pub/Sub очереди', time: 20 },
+                { id: '17-06', file: '06-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
         {
@@ -171,6 +211,23 @@ export const curriculum = {
                 { id: '11-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
+        // ─── АЛЬТЕРНАТИВНЫЕ ПРОТОКОЛЫ ────────────────────────────────
+        {
+            id: '09',
+            path: '09-grpc',
+            title: 'gRPC',
+            icon: 'bi-broadcast',
+            description: 'Protocol Buffers, gRPC сервер/клиент, REST vs gRPC',
+            lessons: [
+                { id: '09-01', file: '01-grpc-intro', title: 'Введение в gRPC', time: 20 },
+                { id: '09-02', file: '02-protobuf', title: 'Protocol Buffers', time: 25 },
+                { id: '09-03', file: '03-grpc-server', title: 'gRPC сервер', time: 25 },
+                { id: '09-04', file: '04-grpc-client', title: 'gRPC клиент', time: 20 },
+                { id: '09-05', file: '05-rest-vs-grpc', title: 'REST vs gRPC', time: 20 },
+                { id: '09-06', file: '06-module-quiz', title: 'Итоговый квиз', time: 15 },
+            ]
+        },
+        // ─── АРХИТЕКТУРА ──────────────────────────────────────────────
         {
             id: '12',
             path: '12-oop-solid',
@@ -188,22 +245,7 @@ export const curriculum = {
                 { id: '12-08', file: '08-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
-        {
-            id: '13',
-            path: '13-docker-git',
-            title: 'Docker и Git',
-            icon: 'bi-box',
-            description: 'Git workflow, Docker, Dockerfile для Go, docker-compose',
-            lessons: [
-                { id: '13-01', file: '01-git-basics', title: 'Основы Git', time: 25 },
-                { id: '13-02', file: '02-git-branching', title: 'Ветвление и слияние', time: 20 },
-                { id: '13-03', file: '03-git-workflow', title: 'Git Workflow', time: 20 },
-                { id: '13-04', file: '04-docker-basics', title: 'Основы Docker', time: 25 },
-                { id: '13-05', file: '05-dockerfile-go', title: 'Dockerfile для Go', time: 20 },
-                { id: '13-06', file: '06-docker-compose', title: 'docker-compose', time: 20 },
-                { id: '13-07', file: '07-module-quiz', title: 'Итоговый квиз', time: 15 },
-            ]
-        },
+        // ─── ФИНАЛЬНЫЙ ПРОЕКТ ─────────────────────────────────────────
         {
             id: '14',
             path: '14-clean-code-project',
@@ -221,23 +263,7 @@ export const curriculum = {
                 { id: '14-08', file: '08-career-roadmap', title: 'Путь к работе Go-разработчиком', time: 30 },
             ]
         },
-        {
-            id: '15',
-            path: '15-algorithms',
-            title: 'Алгоритмы и Структуры Данных',
-            icon: 'bi-diagram-3',
-            description: 'Big O, сортировки, поиск, деревья, графы, хеш-таблицы',
-            lessons: [
-                { id: '15-01', file: '01-big-o', title: 'Сложность алгоритмов (Big O)', time: 25 },
-                { id: '15-02', file: '02-arrays-linked-lists', title: 'Массивы и связные списки', time: 25 },
-                { id: '15-03', file: '03-stacks-queues', title: 'Стеки и очереди', time: 20 },
-                { id: '15-04', file: '04-sorting', title: 'Алгоритмы сортировки', time: 30 },
-                { id: '15-05', file: '05-hash-tables', title: 'Хеш-таблицы', time: 25 },
-                { id: '15-06', file: '06-trees', title: 'Деревья и обход', time: 30 },
-                { id: '15-07', file: '07-graphs', title: 'Графы (BFS, DFS)', time: 35 },
-                { id: '15-08', file: '08-module-quiz', title: 'Итоговый квиз', time: 20 },
-            ]
-        },
+        // ─── СПЕЦИАЛИЗАЦИЯ / ФАКУЛЬТАТИВ ─────────────────────────────
         {
             id: '16',
             path: '16-advanced-sql',
@@ -252,21 +278,6 @@ export const curriculum = {
                 { id: '16-05', file: '05-advanced-transactions', title: 'Уровни изоляции транзакций', time: 30 },
                 { id: '16-06', file: '07-locking', title: 'Блокировки (Locks)', time: 20 },
                 { id: '16-07', file: '08-module-quiz', title: 'Итоговый квиз', time: 20 },
-            ]
-        },
-        {
-            id: '17',
-            path: '17-redis',
-            title: 'Redis и Кэширование',
-            icon: 'bi-hdd-stack',
-            description: 'In-memory DB, кэширование, Pub/Sub, персистентность',
-            lessons: [
-                { id: '17-01', file: '01-redis-basics', title: 'Что такое Redis?', time: 20 },
-                { id: '17-02', file: '02-data-types', title: 'Типы данных Redis', time: 25 },
-                { id: '17-03', file: '03-redis-go', title: 'Работа с Redis в Go', time: 25 },
-                { id: '17-04', file: '04-caching-patterns', title: 'Паттерны кэширования', time: 30 },
-                { id: '17-05', file: '05-pub-sub', title: 'Pub/Sub очереди', time: 20 },
-                { id: '17-06', file: '06-module-quiz', title: 'Итоговый квиз', time: 15 },
             ]
         },
         {
