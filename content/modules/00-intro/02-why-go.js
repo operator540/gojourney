@@ -35,9 +35,9 @@ export default {
     </tr>
     <tr>
         <td style="padding:10px;border:1px solid var(--border)">💰 Зарплата (РФ, 2024)</td>
-        <td style="padding:10px;border:1px solid var(--border);color:#4ade80">250-700к/мес</td>
-        <td style="padding:10px;border:1px solid var(--border);color:#facc15">180-500к/мес</td>
-        <td style="padding:10px;border:1px solid var(--border);color:#facc15">200-600к/мес</td>
+        <td style="padding:10px;border:1px solid var(--border);color:#4ade80">Junior 80-150к → Senior 350-700к</td>
+        <td style="padding:10px;border:1px solid var(--border);color:#facc15">Junior 60-120к → Senior 300-600к</td>
+        <td style="padding:10px;border:1px solid var(--border);color:#facc15">Junior 70-130к → Senior 300-650к</td>
     </tr>
     <tr style="background:var(--surface-2)">
         <td style="padding:10px;border:1px solid var(--border)">🏢 Кто использует</td>
@@ -53,19 +53,19 @@ export default {
     </tr>
 </table>
 
-<h3>Что говорят разработчики о Go</h3>
+<h3>Почему разработчики выбирают Go</h3>
 <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem">
     <blockquote style="border-left:3px solid #60a5fa;padding:1rem;background:var(--surface-2);border-radius:0 8px 8px 0;margin:0">
-        <p style="margin:0 0 0.5rem 0">"Go стал моим любимым языком. Ты пишешь код быстро, он читается как английский, а работает как C++. За 3 месяца я с Python перешёл на Go и не пожалел."</p>
-        <small style="color:var(--text-muted)">— Senior Backend Developer, 8 лет опыта</small>
+        <p style="margin:0 0 0.5rem 0">"Go стал моим любимым языком. Код пишется быстро, читается легко, а работает очень быстро. Переход с Python занял пару месяцев."</p>
+        <small style="color:var(--text-muted)">— Типичный отзыв из Go Community Survey</small>
     </blockquote>
     <blockquote style="border-left:3px solid #4ade80;padding:1rem;background:var(--surface-2);border-radius:0 8px 8px 0;margin:0">
-        <p style="margin:0 0 0.5rem 0">"Go — единственный язык, где я не спорю с компилятором, а благодарю его. Он заставляет писать понятный код и не даёт накосячить."</p>
-        <small style="color:var(--text-muted)">— Lead Engineer, Yandex Cloud</small>
+        <p style="margin:0 0 0.5rem 0">"Компилятор Go — как строгий, но справедливый учитель. Он не даёт накосячить и заставляет писать понятный код. Это экономит часы дебага."</p>
+        <small style="color:var(--text-muted)">— Частое мнение на r/golang и Hacker News</small>
     </blockquote>
     <blockquote style="border-left:3px solid #a78bfa;padding:1rem;background:var(--surface-2);border-radius:0 8px 8px 0;margin:0">
-        <p style="margin:0 0 0.5rem 0">"Я изучил Go за 6 месяцев параллельно с работой продавцом. Первая работа разработчиком — 180к/мес. Сейчас через 2 года — 450к. Go сделал это возможным."</p>
-        <small style="color:var(--text-muted)">— Junior→Middle разработчик, история смены профессии</small>
+        <p style="margin:0 0 0.5rem 0">"Я учил Go 8 месяцев параллельно с основной работой. Первая работа Junior-ом — 100к/мес. Через полтора года — 220к. Не космос, но разница с прошлой работой огромная. Главное — начать."</p>
+        <small style="color:var(--text-muted)">— Собирательный образ на основе историй из Go-сообщества</small>
     </blockquote>
 </div>
 `
@@ -124,14 +124,15 @@ export default {
 <h3>Конкретный план 80/20 для этого курса</h3>
 <p>Если у тебя ограниченное время — вот <strong>минимальный путь к первой работе</strong>:</p>
 <ol>
-    <li><strong>Обязательно:</strong> модули 1-8 (основы → REST API) — это ядро</li>
-    <li><strong>Обязательно:</strong> модуль 13 (Git + Docker) — без этого не возьмут</li>
-    <li><strong>Обязательно:</strong> модуль 14 (финальный проект) — это твоё портфолио</li>
-    <li><strong>По возможности:</strong> модули 10-11 (SQL + GORM) — очень часто спрашивают</li>
-    <li><strong>Потом, на работе:</strong> всё остальное — учишь по мере задач</li>
+    <li><strong>Обязательно:</strong> Основы Go → Структуры → Пакеты → Ошибки → Конкурентность (фундамент языка)</li>
+    <li><strong>Обязательно:</strong> Тестирование → HTTP-серверы → REST API (ты строишь backend)</li>
+    <li><strong>Обязательно:</strong> Git и Docker — без этого не возьмут на работу</li>
+    <li><strong>Обязательно:</strong> SQL + PostgreSQL — спрашивают на каждом собеседовании</li>
+    <li><strong>Обязательно:</strong> Финальный проект — это твоё портфолио для резюме</li>
+    <li><strong>Потом, на работе:</strong> SOLID, Gin/Echo, Generics, Микросервисы — учишь по мере задач</li>
 </ol>
 
-<p>Итого: <strong>10 модулей из 22</strong> дадут тебе 80% того, что нужно для первой работы.</p>
+<p>Итого: <strong>~12 модулей из 24</strong> дадут тебе 80% того, что нужно для первой работы. Остальное приходит с опытом.</p>
 `
         },
         {

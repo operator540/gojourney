@@ -10,7 +10,7 @@ export default {
             type: 'theory',
             content: `
 <h2>Как учатся настоящие разработчики</h2>
-<p>Мы опросили разработчиков с опытом от 3 до 15 лет о том, как они учились и что реально работает. Вот их честные ответы.</p>
+<p>Эти методы подтверждены исследованиями и опытом тысяч разработчиков. Вот что реально работает.</p>
 
 <h3>Метод № 1: Феймановская техника</h3>
 <p>Ричард Фейнман — физик-нобелевский лауреат — придумал метод, который используют лучшие программисты:</p>
@@ -38,7 +38,8 @@ export default {
         {
             type: 'theory',
             content: `
-<h3>Что говорят senior-разработчики о своём пути</h3>
+<h3>Типичные истории Go-разработчиков</h3>
+<p style="color:var(--text-muted);margin-bottom:1rem"><small>Собирательные образы на основе реальных историй из сообщества</small></p>
 <div style="display:flex;flex-direction:column;gap:1.5rem">
     <div style="background:var(--surface-2);padding:1.5rem;border-radius:8px;border:1px solid var(--border)">
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
