@@ -9,7 +9,8 @@ export const CodeEditor = {
         const safeTitle = section.title ? section.title.replace(/[^a-zA-Z0-9]/g, '-').slice(0, 20) : 'main';
         const editorId = `editor-${lessonId.replace(/[^a-zA-Z0-9]/g, '-')}-${safeTitle}`;
         const savedCode = State.getEditorCode(lessonId);
-        const code = savedCode || section.starterCode;
+        const starter = section.starterCode || section.initialCode || '';
+        const code = savedCode || starter;
 
         return `
             <div class="card mb-4 editor-section" data-lesson-id="${lessonId}" data-editor-id="${editorId}">
@@ -25,7 +26,7 @@ export const CodeEditor = {
                 <div class="card-body p-0">
                     <div class="editor-container" id="${editorId}"
                         style="height: 300px; width: 100%;"
-                        data-starter-code="${Renderer.escapeAttr(section.starterCode)}"
+                        data-starter-code="${Renderer.escapeAttr(starter)}"
                         data-initial-code="${Renderer.escapeAttr(code)}">
                     </div>
                 </div>

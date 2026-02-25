@@ -25,7 +25,9 @@ export const QuizEngine = {
     },
 
     _renderQuestion(q, idx) {
-        let html = `<div class="quiz-question" data-qid="${q.id}" data-type="${q.type}" data-correct='${JSON.stringify(q.correct)}'>`;
+        // Поддержка двух форматов code-fill: {template, correct} и {code, answer}
+        const correctVal = (q.type === 'code-fill' && q.correct === undefined) ? q.answer : q.correct;
+        let html = `<div class="quiz-question" data-qid="${q.id}" data-type="${q.type}" data-correct='${JSON.stringify(correctVal)}'>`;
         html += `<p class="quiz-question-text">${idx + 1}. ${q.question}</p>`;
 
         switch (q.type) {
@@ -58,7 +60,8 @@ export const QuizEngine = {
                 break;
 
             case 'code-fill': {
-                const parts = q.template.split('___');
+                const tmpl = q.template || q.code || '';
+                const parts = tmpl.split(/_{2,}/);
                 html += `
                     <div class="quiz-code-fill">
                         <code>${parts[0]}</code>
